@@ -1,0 +1,33 @@
+import java.util.Scanner;
+import java.util.*;
+import java.lang.*;
+
+public class addrev {
+
+	public static void main(String[] args)throws java.lang.Exception {
+
+		Scanner sc = new Scanner(System.in);
+		int t = sc.nextInt();
+		int a = 0;
+		int b = 0;
+		while (t-- > 0) {
+			a = sc.nextInt();
+			b = sc.nextInt();
+			int result = rev(rev(a) + rev(b));
+			System.out.println(result);
+		}
+
+	}
+
+	public static int rev(int n) {
+		int rem = 0;
+		int temp = 0;
+		while (n > 0) {
+			rem = n % 10;
+			temp = temp * 10 + rem;
+			n = n / 10;
+		}
+		return temp;
+	}
+
+}
