@@ -1,0 +1,26 @@
+import java.util.Scanner;
+import java.math.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int t = sc.nextInt();
+		while(t-- > 0)
+		{
+			int n = sc.nextInt();
+			String fact = factorial(n);
+			System.out.println(fact);
+		}
+	}
+	
+	private static String factorial(int n) {
+		BigInteger b1 = new BigInteger("1");
+		for(int i=1;i<=n;i++)
+		{
+		b1 = b1.multiply(new BigInteger(i + ""));
+		}
+		return b1.toString();
+	}	
+}
+
